@@ -20,4 +20,8 @@ public class CarInspectionService {
         int doors = car.getNumberOfDoors();
         return doors == 3 || doors == 5;
     }
+
+    boolean checkCar(Car car) {
+        return hasFourWheels(car) && hasSeatBelt(car) && hasAirbag(car) && hasThreeOrFiveDoors(car);
+    }
 }
