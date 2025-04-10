@@ -15,4 +15,9 @@ public class CarInspectionService {
     boolean hasAirbag(Car car) {
         return car.isAirbag();
     }
+
+    boolean hasThreeOrFiveDoors(Car car) {
+        int doors = car.getNumberOfDoors();
+        return doors == 3 || doors == 5;
+    }
 }

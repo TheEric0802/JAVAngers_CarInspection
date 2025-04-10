@@ -35,4 +35,19 @@ class CarInspectionServiceTest {
     void hasAirbag_shouldReturnTrue_WhenCarHasAirbag() {
         assertThat(CarInspectionService.hasAirbag(new Car(4, 4, true, true))).isTrue();
     }
+
+    @Test
+    void hasThreeOrFiveDoors_shouldReturnTrue_WhenCarHasThreeDoors() {
+        assertThat(CarInspectionService.hasThreeOrFiveDoors(new Car(4, 3, true, true))).isTrue();
+    }
+
+    @Test
+    void hasThreeOrFiveDoors_shouldReturnTrue_WhenCarHasFiveDoors() {
+        assertThat(CarInspectionService.hasThreeOrFiveDoors(new Car(4, 5, true, true))).isTrue();
+    }
+
+    @Test
+    void hasThreeOrFiveDoors_shouldReturnFalse_WhenCarHasFourDoors() {
+        assertThat(CarInspectionService.hasThreeOrFiveDoors(new Car(4, 4, true, true))).isFalse();
+    }
 }
