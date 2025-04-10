@@ -4,4 +4,7 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class CarInspectionService {
+    boolean hasFourWheels(Car car) {
+        return car.getNumberOfTires() == 4;
+    }
 }
