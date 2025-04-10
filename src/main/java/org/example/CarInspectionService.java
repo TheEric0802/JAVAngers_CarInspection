@@ -11,4 +11,8 @@ public class CarInspectionService {
     boolean hasSeatBelt(Car car) {
         return car.isSeatBelt();
     }
+
+    boolean hasAirbag(Car car) {
+        return car.isAirbag();
+    }
 }

@@ -25,4 +25,14 @@ class CarInspectionServiceTest {
     void hasSeatBelt_shouldReturnTrue_WhenCarHasSeatBelt() {
         assertThat(CarInspectionService.hasSeatBelt(new Car(4, 4, true, true))).isTrue();
     }
+
+    @Test
+    void hasAirbag_shouldReturnFalse_WhenCarHasNoAirbag() {
+        assertThat(CarInspectionService.hasAirbag(new Car(4, 4, true, false))).isFalse();
+    }
+
+    @Test
+    void hasAirbag_shouldReturnTrue_WhenCarHasAirbag() {
+        assertThat(CarInspectionService.hasAirbag(new Car(4, 4, true, true))).isTrue();
+    }
 }
