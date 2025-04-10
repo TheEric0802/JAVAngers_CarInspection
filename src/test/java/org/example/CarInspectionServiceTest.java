@@ -15,4 +15,14 @@ class CarInspectionServiceTest {
     void hasFourWheels_shouldReturnTrue_WhenCarHasFourWheels() {
         assertThat(CarInspectionService.hasFourWheels(new Car(4, 4, true, true))).isTrue();
     }
+
+    @Test
+    void hasSeatBelt_shouldReturnFalse_WhenCarHasNoSeatBelt() {
+        assertThat(CarInspectionService.hasSeatBelt(new Car(4, 4, false, true))).isFalse();
+    }
+
+    @Test
+    void hasSeatBelt_shouldReturnTrue_WhenCarHasSeatBelt() {
+        assertThat(CarInspectionService.hasSeatBelt(new Car(4, 4, true, true))).isTrue();
+    }
 }
